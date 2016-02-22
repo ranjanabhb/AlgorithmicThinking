@@ -1,33 +1,7 @@
 """ Homework submission of Module-2 """
 # Setup Constants
-EX_GRAPH0 = dict()
-EX_GRAPH0 = {
-             0: set([1,2]),
-             1: set([]),
-             2: set([])
-            }
 
-EX_GRAPH1 = dict()
-EX_GRAPH1[0] = set([1, 4, 5])
-EX_GRAPH1[1] = set([2, 6])
-EX_GRAPH1[2] = set([3])
-EX_GRAPH1[3] = set([0])
-EX_GRAPH1[4] = set([1])
-EX_GRAPH1[5] = set([2])
-EX_GRAPH1[6] = set([])
-
-EX_GRAPH2 = dict()
-EX_GRAPH2[0] = set([1, 4, 5])
-EX_GRAPH2[1] = set([2, 6])
-EX_GRAPH2[2] = set([3, 7])
-EX_GRAPH2[3] = set([7])
-EX_GRAPH2[4] = set([1])
-EX_GRAPH2[5] = set([2])
-EX_GRAPH2[6] = set([])
-EX_GRAPH2[7] = set([3])
-EX_GRAPH2[8] = set([1, 2])
-EX_GRAPH2[9] = set([0, 3, 4, 5, 6, 7])
-
+import utility
 from collections import deque
 
 def remove_node_from_graph(ugraph, node):
@@ -115,9 +89,7 @@ def compute_resilience(ugraph, attack_order):
     """
 
     resilience = list()
-    resilience.append(largest_cc_size(ugraph))
-
-    #resilience.append([largest_cc_size(ugraph.pop(node)) for node in attack_order])
+    resilience.append(largest_cc_size(ugraph))    
 
     for node in attack_order:
         remove_node_from_graph(ugraph, node)
@@ -129,5 +101,5 @@ if __name__ == "__main__":
     #print (bfs_visited(EX_GRAPH2, 0))
     #print (cc_visited(EX_GRAPH2))
     #print (largest_cc_size(EX_GRAPH2))
-    print (compute_resilience(EX_GRAPH2, [2, 3, 6]))
+    print (compute_resilience(utility.EX_GRAPH2, [2, 3, 6]))
 
