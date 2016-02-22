@@ -1,30 +1,4 @@
 """ Homework submission of Module-1 """
-# Setup Constants
-EX_GRAPH0 = dict() 
-EX_GRAPH0[0] = set([1,2])
-EX_GRAPH0[1] = set([])
-EX_GRAPH0[2] = set([])
-
-EX_GRAPH1 = dict()
-EX_GRAPH1[0] = set([1, 4, 5])
-EX_GRAPH1[1] = set([2, 6])
-EX_GRAPH1[2] = set([3])
-EX_GRAPH1[3] = set([0])
-EX_GRAPH1[4] = set([1])
-EX_GRAPH1[5] = set([2])
-EX_GRAPH1[6] = set([])
-
-EX_GRAPH2 = dict()
-EX_GRAPH2[0] = set([1, 4, 5])
-EX_GRAPH2[1] = set([2, 6])
-EX_GRAPH2[2] = set([3, 7])
-EX_GRAPH2[3] = set([7])
-EX_GRAPH2[4] = set([1])
-EX_GRAPH2[5] = set([2])
-EX_GRAPH2[6] = set([])
-EX_GRAPH2[7] = set([3])
-EX_GRAPH2[8] = set([1, 2])
-EX_GRAPH2[9] = set([0, 3, 4, 5, 6, 7])
 
 def make_complete_graph(num_nodes):
     """ 
